@@ -22,7 +22,7 @@
                 <div class="col-md-4">
                     <form action="index2.php" method="post">
                         <br>
-                        <input name="usuario_nombre" class="form-control" type="text" placeholder="Usuario">
+                        <input name="usuario_nombre" class="form-control" type="text" placeholder="DNI">
                         <br>
                         <input name="usuario_clave"  class="form-control" type="password" placeholder="Contraseña">
                         <br>
