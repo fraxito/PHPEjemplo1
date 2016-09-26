@@ -1,4 +1,9 @@
-
+<?php
+//ahora session start continúa la sesión que creamos en login.php
+if (!isset($_SESSION) ) {session_start();}
+//leo lo que guardé en la variable Nombre
+$nombre = $_SESSION['Nombre'];
+?>
 <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -12,7 +17,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#"><?php echo $nombre;?></a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
@@ -29,9 +34,8 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+
+            <li class="active"><a href="#"><span class="sr-only"></span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

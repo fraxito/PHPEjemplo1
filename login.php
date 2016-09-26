@@ -20,7 +20,14 @@
               $r = $resultado_consulta -> fetch_array(); 
               $DNI = $r['DNI'];
               $password = $r['password'];
-              if ($usuario_clave == $password){
+              if ($usuario_clave == $password){                 
+                  //inicializo la sesión 
+                  session_start();
+                   //guardo los datos del usuario que ha hecho login correcto
+                  $_SESSION['DNI'] = $DNI;
+                  $_SESSION['Nombre'] = $r['Nombre'];
+                  $_SESSION['Email'] = $r['Email'];
+                  
                   require 'menu_inicio.php';
               }
               else {
