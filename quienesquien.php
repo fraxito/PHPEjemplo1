@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>Prueba de PHP</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
 
     </head>
     <body>
@@ -23,7 +24,11 @@
                 var posX = e.pageX - $(this).position().left;
                 var posY = e.pageY - $(this).position().top;
                 console.log (posX);
-                $('#ejemplo').append('<div id="recuadro" style="width: 10px; height: 10px; border: solid green 1px; position:absolute; top:'+posY+'px; left:'+posX+'px;"></div>');
+                $('#ejemplo').append('<div id="recuadro" style="width: 100px; height: 100px; border: solid green 1px; position:absolute; top:'+posY+'px; left:'+posX+'px;"></div>');
+                $('#recuadro').resizable({
+                    resize: function(){},
+                    stop:function(){}
+                });
             });
         } );
 
