@@ -9,6 +9,7 @@
 
     </head>
     <body>
+        <h1></h1>
         <div id="ejemplo"  style=" width: 700px; height: 500px; border: solid black 1px; ">
             
         </div>
@@ -20,17 +21,19 @@
     
     <script>
         $( function() {
-             $('#ejemplo').click(function (e) { //Relative ( to its parent) mouse position 
-                var posX = e.pageX - $(this).position().left;
-                var posY = e.pageY - $(this).position().top;
-                console.log (posX);
-                $('#ejemplo').append('<div id="recuadro" style="width: 100px; height: 100px; border: solid green 1px; position:absolute; top:'+posY+'px; left:'+posX+'px;"></div>');
-                $('#recuadro').resizable({
-                    resize: function(){},
-                    stop:function(){}
-                });
+            $('#ejemplo').append('<div id="recuadro" style="width: 100px; height: 100px; border: solid green 1px; position:absolute; top:0 px; left:0px;"></div>');
+            $('#recuadro').resizable().draggable();
+        var numeroCuadrados = 0;
+             $('#ejemplo').click(function (e) { 
+                var posX = e.pageX ;
+                var posY = e.pageY ;
+
+                $('#recuadro').css({top: posY, left: posX});
+
             });
         } );
+        
+
 
         
     </script>
