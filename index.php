@@ -26,7 +26,7 @@
                         <br>
                         <input id = "usuario_clave"  class="form-control" type="password" placeholder="Contraseña">
                         <br>
-                        <button class="btn btn-success btn-block" onclick="chequeaPass();"> Entrar</button>
+                        <button class="btn btn-success btn-block disabled" onclick="chequeaPass();"> Entrar</button>
                     <!--</form>-->
                 </div>
                 <div class="col-md-4"></div>
@@ -49,5 +49,9 @@
                 usuario_clave : _usuario_clave
             });
         }
+        
+
+
     </script>
+    
 </html>

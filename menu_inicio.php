@@ -81,7 +81,12 @@ for ($i = 0; $i < $num_usuarios; $i++){
 </div>
 
 
-
+    <script>
+        $(".nav a").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+         });
+    </script>
 
 
 
