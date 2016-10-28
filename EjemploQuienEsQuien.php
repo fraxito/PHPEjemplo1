@@ -30,15 +30,20 @@
             },
             stop: function(){
                 var posicion = $(this).position();
-                var altura =  window.innerHeight;
-                if (posicion.top < altura/4){
-                    $('#etiqueta01').removeClass('btn-primary').addClass('btn-danger');
-                    $('#etiqueta01').animate({top: "200px",left: "100px"}, 5000);
-                } else if (posicion.top >= altura/4 && posicion < altura/2){
-                    
-                } 
+                var identificador = $(this).attr('id');
+                compruebaAcierto(identificador, posicion);
             }
         });
+        
+    function compruebaAcierto(_id, _posicion){
+        var altura =  window.innerHeight;
+        if (_posicion.top < altura/4){
+            $('#'+_id).removeClass('btn-primary').addClass('btn-danger');
+            $('#'+_id).animate({top: "200px",left: "100px"}, 5000);
+        } else if (_posicion.top >= altura/4 && _posicion < altura/2){
+            
+        } 
+    }    
     </script>
     
 </html>
