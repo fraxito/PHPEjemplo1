@@ -33,6 +33,7 @@
                 var altura =  window.innerHeight;
                 if (posicion.top < altura/4){
                     $('#etiqueta01').removeClass('btn-primary').addClass('btn-danger');
+                    $('#etiqueta01').animate({top: "200px",left: "100px"}, 5000);
                 } else if (posicion.top >= altura/4 && posicion < altura/2){
                     
                 } 
