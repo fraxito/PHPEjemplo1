@@ -21,10 +21,21 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
+        
         $('#etiqueta01').draggable({
             drag: function(){
                 var posicion = $(this).position();
                 $('#posicionY').html(posicion.top);
+                $('#posicionX').html(posicion.left);
+            },
+            stop: function(){
+                var posicion = $(this).position();
+                var altura =  window.innerHeight;
+                if (posicion.top < altura/4){
+                    $('#etiqueta01').removeClass('btn-primary').addClass('btn-danger');
+                } else if (posicion.top >= altura/4 && posicion < altura/2){
+                    
+                } 
             }
         });
     </script>
